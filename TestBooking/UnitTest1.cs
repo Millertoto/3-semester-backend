@@ -32,5 +32,23 @@ namespace TestBooking
             Assert.AreEqual(9, result.Capacity);
 
         }
+
+
+
+        [TestMethod]
+        public void GetAllMeasurementsTest()
+        {
+            // Vi skaber en instans af vores Measurement controller,
+            // for at kunne bruge metoderne den indeholder
+            // til at finde ud af, om metoden henter vores liste med Measurements.
+            MeasurementsController controller = new MeasurementsController();
+
+            var result = controller.GetAllMeasurements() as List<Measurement>;
+
+            Assert.AreEqual(5, result.Count);
+        }
+
+
+
     }
 }
