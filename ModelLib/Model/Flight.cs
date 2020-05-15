@@ -8,7 +8,7 @@ namespace ModelLib.Model
     {
         // instance fields
         private string _flightNr;
-        private string _departure;
+        private string _departingFrom;
         private string _destination;
         private double _distance;
         private double _travelTime;
@@ -20,13 +20,13 @@ namespace ModelLib.Model
 
         }
 
-        public Flight(string flightNr, string departure, string destination, double distance,
+        public Flight(string flightNr, string departingFrom, string destination, double distance,
             double travelTime, int capacity, double fuelConsumption, bool stopOver, string company)
 
         {
             
             FlightNr = flightNr;
-            Departure = departure;
+            DepartingFrom = departingFrom;
             Destination = destination;
             Distance = distance;
             TravelTime = travelTime;
@@ -35,13 +35,18 @@ namespace ModelLib.Model
             StopOver = stopOver;
             Company = company;
         }
+        public int Id
+        {
+            get;
+            set;
+        }
 
         public string FlightNr
         {
             get;
             set;
         }
-        public string Departure
+        public string DepartingFrom
         {
             get;
             set;
@@ -81,7 +86,7 @@ namespace ModelLib.Model
 
         public string ToString()
         {
-            return FlightNr + " " + Departure + " " + Destination + " " + Capacity + " " +
+            return FlightNr + " " + DepartingFrom + " " + Destination + " " + Capacity + " " +
                 TravelTime + " " + FuelConsumption + " " + Distance + " " + StopOver + " " + Company;
         }
     }

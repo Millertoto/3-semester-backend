@@ -23,4 +23,4 @@ namespace ModelLib.Model
         public bool AllReadyBooked { get; set; }
     }
 }
-}
+

@@ -13,7 +13,7 @@ namespace ModelLib.Model
 
         }
 
-        public DbSet<FlightDBContext> flightItem
+        public DbSet<Flight> flightItems
         {
             get;
             set;

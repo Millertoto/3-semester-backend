@@ -16,11 +16,11 @@ namespace Flybooking2.Controllers
     {
         private static List<Flight> flights = new List<Flight>()
         {
-            new Flight("Zf9-2tk", "", "", 5.7, 10.3, 9, 50.59, false, ""),
-            new Flight("", "", "", 10.7, 20.3, 18, 60.69, true, ""),
-            new Flight("", "", "", 20.7, 30.3, 36, 70.79, false, ""),
-            new Flight("", "", "", 30.7, 40.3, 50, 50.50, false, ""),
-            new Flight("", "", "", 49.7, 50.3, 60, 70.70, true, "")
+            new Flight("8u665-8", "Alburquerque", "Pismo", 5.7, 10.3, 9, 50.59, false, "Warner Bros"),
+            new Flight("Dg2-9eD", "Oakland", "Minsk", 10.7, 20.3, 18, 60.69, true, "British Airways"),
+            new Flight("Qj4-10l", "Copenhagen", "Zürich", 20.7, 30.3, 36, 70.79, false, "SAS"),
+            new Flight("Tk1-09m", "New York", "Copenhagen", 30.7, 40.3, 50, 50.50, false, "Ryanair"),
+            new Flight("Fw7-5rp", "Copenhagen", "Paris", 49.7, 50.3, 60, 70.70, true, "Emirates")
         };
 
         // GET: api/Flights
