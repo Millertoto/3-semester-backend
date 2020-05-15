@@ -26,8 +26,12 @@ namespace FlightBookingInMemDB
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<MeasurementContext>(opt =>
+                opt.UseInMemoryDatabase("measurements"));
+
             services.AddDbContext<FlightDBContext>(opt =>
                 opt.UseInMemoryDatabase("flightItems"));
+            
             services.AddControllers();
         }
 
