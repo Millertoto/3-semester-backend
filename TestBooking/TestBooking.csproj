@@ -27,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FlightBookingInMemDB\FlightBookingInMemDB.csproj" />
     <ProjectReference Include="..\Flybooking2\Flybooking2.csproj" />
     <ProjectReference Include="..\ModelLib\ModelLib.csproj" />
 
