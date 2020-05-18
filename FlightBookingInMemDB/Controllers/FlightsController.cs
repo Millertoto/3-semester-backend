@@ -73,6 +73,25 @@ namespace FlightBookingInMemDB.Controllers
             return NoContent();
         }
 
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutBooking(int id, Flight flight)
+        {
+            var flight2 = await GetFlight(id);
+            if(GetFlight(id) != null)
+            {
+                try
+                {
+                    _context.flightItems[id].Seats
+                    await _context.SaveChangesAsync();
+                }
+            }
+
+            else
+            {
+                return BadRequest();
+            }
+        }
+
         // POST: api/Flights
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
