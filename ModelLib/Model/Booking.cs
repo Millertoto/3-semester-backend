@@ -17,10 +17,12 @@ namespace ModelLib.Model
             TravelClass = travelClass;
             AlreadyBooked = alreadyBooked;
         }
+        public int Id { get; set; }
         public string FlightNr { get; set; }
         public int SeatNr { get; set; }
         public string TravelClass { get; set; }
         public bool AlreadyBooked { get; set; }
+        public Flight flight { get; set; }
     }
 }
 

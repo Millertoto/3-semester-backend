@@ -21,7 +21,7 @@ namespace ModelLib.Model
         }
 
         public Flight(string flightNr, string departingFrom, string destination, double distance,
-            double travelTime, int capacity, double fuelConsumption, bool stopOver, string company, Booking[] seats)
+            double travelTime, int capacity, double fuelConsumption, bool stopOver, string company, ICollection<Booking> seats)
 
         {
             
@@ -85,7 +85,7 @@ namespace ModelLib.Model
 
         public string Company { get; set; }
 
-        public Booking[] Seats { get; set; }
+        public ICollection<Booking> Seats { get; set; }
 
         public string ToString()
         {

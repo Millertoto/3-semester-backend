@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flybooking2", "Flybooking2\Flybooking2.csproj", "{67B15050-00BD-4C2B-B4FB-4856F3F3CD3F}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestBooking", "TestBooking\TestBooking.csproj", "{3BF2DA22-AAC6-47D9-9848-E75F365515D8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModelLib", "ModelLib\ModelLib.csproj", "{29CFC942-92A3-4DA0-9D6B-86E0C6A6C7A7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightBookingInMemDB", "FlightBookingInMemDB\FlightBookingInMemDB.csproj", "{1E0DD025-1616-49B3-9054-1E3B4CB79017}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeasurementUnittest", "MeasurementUnittest\MeasurementUnittest.csproj", "{326D9381-B96B-40A4-853D-6F27E06A1E6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeasurementUnittest", "MeasurementUnittest\MeasurementUnittest.csproj", "{326D9381-B96B-40A4-853D-6F27E06A1E6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{67B15050-00BD-4C2B-B4FB-4856F3F3CD3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{67B15050-00BD-4C2B-B4FB-4856F3F3CD3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{67B15050-00BD-4C2B-B4FB-4856F3F3CD3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{67B15050-00BD-4C2B-B4FB-4856F3F3CD3F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3BF2DA22-AAC6-47D9-9848-E75F365515D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3BF2DA22-AAC6-47D9-9848-E75F365515D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BF2DA22-AAC6-47D9-9848-E75F365515D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
