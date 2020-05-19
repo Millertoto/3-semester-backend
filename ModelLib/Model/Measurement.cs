@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace ModelLib.Model
 {
@@ -12,7 +13,10 @@ namespace ModelLib.Model
         public double Pressure { get; set; }
 
 
+        public Measurement()
+        {
 
+        }
         public Measurement(int temperature, int humidity, double pressure)
         {
             Temperature = temperature;
@@ -21,7 +25,7 @@ namespace ModelLib.Model
 
 
         }
-
+        
         public int Id
         {
             get;
