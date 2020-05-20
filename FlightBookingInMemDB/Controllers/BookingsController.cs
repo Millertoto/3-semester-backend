@@ -11,48 +11,47 @@ namespace FlightBookingInMemDB.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class FlightsController : ControllerBase
+    public class BookingsController : ControllerBase
     {
         private readonly FlightDBContext _context;
 
-        public FlightsController(FlightDBContext context)
+        public BookingsController(FlightDBContext context)
         {
             _context = context;
         }
 
-        // GET: api/Flights
+        // GET: api/Bookings
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Flight>>> GetflightItems()
+        public async Task<ActionResult<IEnumerable<Booking>>> Getseat()
         {
-            return await _context.flightItems.ToListAsync();
+            return await _context.seat.ToListAsync();
         }
 
-        // GET: api/Flights/5
+        // GET: api/Bookings/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Flight>> GetFlight(int id)
+        public async Task<ActionResult<Booking>> GetBooking(int id)
         {
-            var flight = await _context.flightItems.FindAsync(id);
+            var booking = await _context.seat.FindAsync(id);
 
-            if (flight == null)
+            if (booking == null)
             {
                 return NotFound();
             }
 
-            return flight;
+            return booking;
         }
 
-        // PUT: api/Flights/5
+        // PUT: api/Bookings/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutFlight(int id, Flight flight)
+        public async Task<IActionResult> PutBooking(int id, Booking booking)
         {
-            if (id != flight.Id)
+            if (id != booking.Id)
             {
                 return BadRequest();
             }
-
-            _context.Entry(flight).State = EntityState.Modified;
+            _context.Entry(booking).State = EntityState.Modified;
 
             try
             {
@@ -60,7 +59,7 @@ namespace FlightBookingInMemDB.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!FlightExists(id))
+                if (!BookingExists(id))
                 {
                     return NotFound();
                 }
@@ -73,39 +72,37 @@ namespace FlightBookingInMemDB.Controllers
             return NoContent();
         }
 
-
-
-        // POST: api/Flights
+        // POST: api/Bookings
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Flight>> PostFlight(Flight flight)
+        public async Task<ActionResult<Booking>> PostBooking(Booking booking)
         {
-            _context.flightItems.Add(flight);
+            _context.seat.Add(booking);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetFlight", new { id = flight.Id }, flight);
+            return CreatedAtAction("GetBooking", new { id = booking.Id }, booking);
         }
 
-        // DELETE: api/Flights/5
+        // DELETE: api/Bookings/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Flight>> DeleteFlight(int id)
+        public async Task<ActionResult<Booking>> DeleteBooking(int id)
         {
-            var flight = await _context.flightItems.FindAsync(id);
-            if (flight == null)
+            var booking = await _context.seat.FindAsync(id);
+            if (booking == null)
             {
                 return NotFound();
             }
 
-            _context.flightItems.Remove(flight);
+            _context.seat.Remove(booking);
             await _context.SaveChangesAsync();
 
-            return flight;
+            return booking;
         }
 
-        private bool FlightExists(int id)
+        private bool BookingExists(int id)
         {
-            return _context.flightItems.Any(e => e.Id == id);
+            return _context.seat.Any(e => e.Id == id);
         }
     }
 }

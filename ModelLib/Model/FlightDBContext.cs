@@ -19,6 +19,6 @@ namespace ModelLib.Model
             set;
         }
 
-
+        public DbSet<Booking> seat { get; set; }
     }
 }
