@@ -51,7 +51,6 @@ namespace FlightBookingInMemDB.Controllers
             {
                 return BadRequest();
             }
-
             _context.Entry(booking).State = EntityState.Modified;
 
             try

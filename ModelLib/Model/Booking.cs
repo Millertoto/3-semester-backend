@@ -10,6 +10,11 @@ namespace ModelLib.Model
         private int _seatNr;
         private string _travelClass;
         private bool _alreadyBooked;
+
+        public Booking()
+        {
+
+        }
         public Booking(string flightNr, int seatNr, string travelClass, bool alreadyBooked)
         {
             FlightNr = flightNr;

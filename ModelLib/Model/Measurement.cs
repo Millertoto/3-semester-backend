@@ -12,7 +12,10 @@ namespace ModelLib.Model
         public double Pressure { get; set; }
 
 
+        public Measurement()
+        {
 
+        }
         public Measurement(int temperature, int humidity, double pressure)
         {
             Temperature = temperature;
